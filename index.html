@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veg Tiffins | Healthy Homemade Vegetarian Meals</title>
+    <meta name="description" content="veg Tiffins delivers healthy, homemade vegetarian meals daily. Order nutritious tiffin service with fresh ingredients and hygienic preparation.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --light-green: #e8f5e9;
+            --dark-green: #27ae60;
+            --orange: #ff9800;
+            --light-orange: #ffecb3;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-green);
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-gray);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-light {
+            background-color: var(--white);
+        }
+        
+        .section-gray {
+            background-color: var(--light-gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e68900;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            color: var(--primary-green);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 10rem 0;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--white);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            flex: 1;
+            padding: 1rem;
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        /* Menu Section */
+        .plans {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .plan {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 1;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .plan:hover {
+            transform: translateY(-10px);
+        }
+        
+        .plan h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .plan .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--orange);
+            margin: 1rem 0;
+        }
+        
+        .plan ul {
+            list-style: none;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        
+        .plan ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .plan ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+        
+        .sample-menu {
+            background-color: var(--light-green);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .sample-menu h3 {
+            text-align: center;
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .menu-item {
+            flex-basis: 48%;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .menu-item i {
+            color: var(--primary-green);
+            margin-right: 10px;
+        }
+        
+        /* Pricing Section */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table th {
+            background-color: var(--primary-green);
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        .pricing-table .highlight {
+            background-color: var(--light-orange);
+            font-weight: 600;
+        }
+        
+        .add-ons {
+            margin-top: 3rem;
+        }
+        
+        .add-ons h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--dark-green);
+        }
+        
+        .add-on-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .add-on-item {
+            flex-basis: 48%;
+            background-color: var(--white);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* Delivery Section */
+        .delivery-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .delivery-info {
+            flex: 1;
+        }
+        
+        .delivery-map {
+            flex: 1;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .delivery-map i {
+            font-size: 4rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .delivery-details {
+            margin-top: 2rem;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-item i {
+            color: var(--primary-green);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+            scrollbar-width: thin;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            min-width: 300px;
+            flex: 1;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            color: var(--primary-green);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .whatsapp-order {
+            text-align: center;
+            background-color: var(--light-green);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .whatsapp-order i {
+            font-size: 3rem;
+            color: #25D366;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ccc;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content, .delivery-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .features, .plans {
+                flex-direction: column;
+            }
+            
+            .feature, .plan {
+                margin-bottom: 2rem;
+            }
+            
+            .menu-item, .add-on-item {
+                flex-basis: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-column {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>veg Tiffins</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu Plans</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Healthy. Homemade. Delivered Fresh Daily.</h1>
+            <p>Nutritious vegetarian meals prepared with love and delivered to your doorstep every day</p>
+            <a href="#contact" class="btn btn-primary">Order Now</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section-light" id="about">
+        <div class="container">
+            <h2>About veg Tiffins</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2025, veg Tiffins began with a simple mission: to provide busy individuals and families with healthy, homemade vegetarian meals that nourish both body and soul.</p>
+                    <p>We believe that good food is the foundation of a healthy life, and everyone deserves access to nutritious meals made with fresh, high-quality ingredients.</p>
+                    <p>Our kitchen follows strict hygiene protocols, and we take pride in our daily menu variety that brings the comfort of home-cooked food to your table.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Locally sourced, seasonal produce</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Homemade Taste</h3>
+                            <p>Traditional recipes with love</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <h3>Daily Delivery</h3>
+                            <p>Fresh meals at your doorstep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fresh vegetarian food">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Plans Section -->
+    <section class="section-gray" id="menu">
+        <div class="container">
+            <h2>Our Menu Plans</h2>
+            <p class="text-center">Choose from our flexible meal plans designed to fit your lifestyle</p>
+            
+            <div class="plans">
+                <div class="plan">
+                    <h3>Daily Plan</h3>
+                    <div class="price">₹120/day</div>
+                    <p>Perfect for trying out our service or occasional orders</p>
+                    <ul>
+                        <li>2 Rotis or 1 Bowl Rice</li>
+                        <li>1 Seasonal Sabzi</li>
+                        <li>1 Dal or Kadhi</li>
+                        <li>Salad & Pickle</li>
+                        <li>1 Sweet/Dessert</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Order Daily</a>
+                </div>
+                
+                <div class="plan">
+                    <h3>Weekly Plan</h3>
+                    <div class="price">₹950/week</div>
+                    <p>Great value for regular healthy meals</p>
+                    <ul>
+                        <li>Everything in Daily Plan</li>
+                        <li>Menu Variety Each Day</li>
+                        <li>Free Sunday Special</li>
+                        <li>Priority Delivery</li>
+                        <li>5% Discount</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Order Weekly</a>
+                </div>
+                
+                <div class="plan">
+                    <h3>Monthly Plan</h3>
+                    <div class="price">₹3,500/month</div>
+                    <p>Best value for long-term healthy eating</p>
+                    <ul>
+                        <li>Everything in Weekly Plan</li>
+                        <li>Customizable Menu Options</li>
+                        <li>Free Extra Sabzi Twice a Week</li>
+                        <li>Premium Priority Delivery</li>
+                        <li>15% Discount</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Order Monthly</a>
+                </div>
+            </div>
+            
+            <div class="sample-menu">
+                <h3>Sample Menu For This Week</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span><strong>Monday:</strong> Palak Paneer, Jeera Rice, Dal Tadka, Salad</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span><strong>Tuesday:</strong> Aloo Gobi, Phulka, Chana Masala, Raita</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span><strong>Wednesday:</strong> Mix Veg, Roti, Rajma, Salad</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span><strong>Thursday:</strong> Baingan Bharta, Jeera Rice, Dal Makhani, Pickle</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span><strong>Friday:</strong> Paneer Butter Masala, Naan, Yellow Dal, Salad</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span><strong>Saturday:</strong> Kofta Curry, Roti, Chole, Raita</span>
+                    </div>
+                </div>
+                <p class="text-center" style="margin-top: 1rem;"><em>Menu changes weekly based on seasonal availability. Customization options available!</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-light" id="pricing">
+        <div class="container">
+            <h2>Transparent Pricing</h2>
+            <p class="text-center">No hidden charges. Simple, straightforward pricing for all our plans.</p>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Price</th>
+                        <th>Savings</th>
+                        <th>Meals Included</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Daily</td>
+                        <td>₹120/day</td>
+                        <td>-</td>
+                        <td>1 Complete Thali</td>
+                        <td>Tryouts & Occasional</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Weekly</td>
+                        <td>₹950/week</td>
+                        <td>₹100 (5%)</td>
+                        <td>6 Complete Thalis + 1 Special</td>
+                        <td>Regular Healthy Eating</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly</td>
+                        <td>₹3,500/month</td>
+                        <td>₹1,000 (15%)</td>
+                        <td>26 Complete Thalis + 4 Specials</td>
+                        <td>Long-term Commitment</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="add-ons">
+                <h3>Add-ons & Extras</h3>
+                <div class="add-on-items">
+                    <div class="add-on-item">
+                        <span>Extra Sabzi</span>
+                        <span>₹30</span>
+                    </div>
+                    <div class="add-on-item">
+                        <span>Extra Roti (2 pieces)</span>
+                        <span>₹10</span>
+                    </div>
+                    <div class="add-on-item">
+                        <span>Special Sweet (Gulab Jamun, etc.)</span>
+                        <span>₹25</span>
+                    </div>
+                    <div class="add-on-item">
+                        <span>Diet Meal (Low Calorie)</span>
+                        <span>₹20 extra</span>
+                    </div>
+                    <div class="add-on-item">
+                        <span>Jain Meal Option</span>
+                        <span>₹20 extra</span>
+                    </div>
+                    <div class="add-on-item">
+                        <span>Extra Rice</span>
+                        <span>₹15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Information -->
+    <section class="section-gray" id="delivery">
+        <div class="container">
+            <h2>Delivery Information</h2>
+            <div class="delivery-content">
+                <div class="delivery-info">
+                    <h3>We Deliver To These Areas</h3>
+                    <p>Currently serving select areas in lucknow. We're expanding soon!</p>
+                    
+                    <div class="delivery-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Covered Areas</h4>
+                                <p>Scooter india, gauri bajar, Banthra, Daroga kheda, Sarojini nagar, Anadar ganj, Transport nagar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Delivery Timings</h4>
+                                <p>Lunch: 12:00 PM - 1:30 PM | Dinner: 7:00 PM - 8:30 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-box"></i>
+                            <div>
+                                <h4>Packaging</h4>
+                                <p>We use eco-friendly, microwave-safe containers that keep your food fresh and warm.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-recycle"></i>
+                            <div>
+                                <h4>Container Return</h4>
+                                <p>Help us reduce waste! Return containers to our delivery person for recycling and get ₹5 credit per container.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="delivery-map">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Service Area Map</h3>
+                    <p>We're currently serving these highlighted areas with plans to expand soon.</p>
+                    <div style="background-color: #e0e0e0; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-top: 1rem;">
+                        <p>Lucknow Service Areas Map</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-light" id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "Veg Tiffins has been a game-changer for our family. As working parents, we struggled to provide nutritious meals daily. Now we get delicious, home-style food without the hassle!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Priya Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Andheri West, Customer for 8 months</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "The food tastes just like my mother's cooking! I've tried many tiffin services, but Veg tiphin stands out for their consistent quality, hygiene, and authentic flavors."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Mehta">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Mehta</h4>
+                            <p>Juhu, Customer for 1 month</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "As someone with specific dietary needs, I appreciate their customizable options. The Jain meals are prepared with utmost care, and the delivery is always on time."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Neha Jain">
+                        </div>
+                        <div class="author-info">
+                            <h4>Neha Jain</h4>
+                            <p>Vile Parle, Customer for 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Order Form -->
+    <section class="section-gray" id="contact">
+        <div class="container">
+            <h2>Place Your Order</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="order-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your 10-digit phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <textarea id="address" class="form-control" rows="3" placeholder="Enter your complete delivery address" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="plan">Select Meal Plan</label>
+                            <select id="plan" class="form-control" required>
+                                <option value="">Choose a plan</option>
+                                <option value="daily">Daily Plan (₹120/day)</option>
+                                <option value="weekly">Weekly Plan (₹950/week)</option>
+                                <option value="monthly">Monthly Plan (₹3,500/month)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferences">Special Preferences/Dietary Requirements</label>
+                            <textarea id="preferences" class="form-control" rows="2" placeholder="e.g., Jain food, less spicy, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Submit Order</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Our Kitchen</h4>
+                                <p>Paras bihar colony,Kanpur road, Lucknow.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>+91 7355045487</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>prabhatmanas279@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Saturday: 8:00 AM - 10:00 PM<br>Sunday: 9:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="whatsapp-order">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>Quick WhatsApp Order</h3>
+                        <p>Prefer to order via WhatsApp? Click below to start a conversation and place your order quickly.</p>
+                        <a href="https://wa.me/7355045487?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order%20for%20FreshLeaf%20Tiffins" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Veg Tiffins</h3>
+                    <p>Delivering healthy, homemade vegetarian meals daily with love and care.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#menu">Menu Plans</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#delivery">Delivery Info</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> daroga kheda, lucknow 226401</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 7355045487</p>
+                    <p><i class="fas fa-envelope"></i> prabhatmanas279@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Veg Tiffins. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order! We will contact you shortly to confirm the details.');
+            this.reset();
+        });
+        
+        // Mobile menu toggle (simplified for this example)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
